@@ -60,6 +60,4 @@ or on Windows PowerShell:
 
 ## Author
 
-Yuvaraj T. S.
-B.Tech CSE(AIML)
-Reva University
+Yuvaraj T. S.    B.Tech CSE(AIML)    Reva University
