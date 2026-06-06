@@ -7,9 +7,11 @@ char canvas[rows][cols];
 
 void initCanvas()
 {
-    for(int i = 0; i < rows; i++)
+    int i, j;
+
+    for(i = 0; i < rows; i++)
     {
-        for(int j = 0; j < cols; j++)
+        for(j = 0; j < cols; j++)
         {
             canvas[i][j] = '_';
         }
@@ -18,12 +20,28 @@ void initCanvas()
 
 void display()
 {
-    for(int i = 0; i < rows; i++)
+    int i, j;
+
+    for(i = 0; i < rows; i++)
     {
-        for(int j = 0; j < cols; j++)
+        for(j = 0; j < cols; j++)
         {
             printf("%c", canvas[i][j]);
         }
+
         printf("\n");
+    }
+}
+
+void drawRectangle(int row, int col, int height, int width)
+{
+    int i, j;
+
+    for(i = row; i < row + height && i < rows; i++)
+    {
+        for(j = col; j < col + width && j < cols; j++)
+        {
+            canvas[i][j] = '*';
+        }
     }
 }
