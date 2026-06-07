@@ -3,6 +3,8 @@
 void initCanvas();
 void display();
 void drawRectangle(int row, int col, int height, int width);
+void drawLine(int row,int col,int length);
+void drawTriangle(int row,int col,int height);
 
 int main()
 {
@@ -10,13 +12,13 @@ int main()
     int row, col, height, width;
 
     initCanvas();
-
-   
     
-        printf("\n===== Graphics Editor =====\n");
-        printf("1. Draw Rectangle\n");
-        printf("2. Display Canvas\n");
-        printf("3. Exit\n");
+    printf("\n===== Graphics Editor =====\n");
+    printf("1. Draw Rectangle\n");
+    printf("2. Draw Line\n");
+    printf("3. Draw Triangle\n");
+    printf("4. Display Canvas\n");
+    printf("5. Exit\n");
 
         printf("Enter choice: ");
         scanf("%d", &choice);
@@ -41,10 +43,45 @@ int main()
                 break;
 
             case 2:
+        {
+            int row,col,length;
+
+            printf("Enter row: ");
+            scanf("%d",&row);
+
+            printf("Enter column: ");
+            scanf("%d",&col);
+
+            printf("Enter length: ");
+            scanf("%d",&length);
+
+            drawLine(row,col,length);
+            display();
+            break;
+        }
+
+            case 3:
+        {
+            int row,col,height;
+
+            printf("Enter row: ");
+            scanf("%d",&row);
+
+            printf("Enter column: ");
+            scanf("%d",&col);
+
+            printf("Enter height: ");
+            scanf("%d",&height);
+
+            drawTriangle(row,col,height);
+            display();
+            break;
+        }
+            case 4:
                 display();
                 break;
 
-            case 3:
+            case 5:
                 printf("Exiting...\n");
                 return 0;
 
