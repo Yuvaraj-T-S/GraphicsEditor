@@ -74,3 +74,40 @@ void drawTriangle(int row, int col, int height)
         }
     }
 }
+
+void drawCircle(int centerRow, int centerCol, int radius)
+{
+    int i, j;
+
+    for(i = 0; i < rows; i++)
+    {
+        for(j = 0; j < cols; j++)
+        {
+            int dx = j - centerCol;
+            int dy = i - centerRow;
+
+            if(dx*dx + dy*dy <= radius*radius)
+            {
+                canvas[i][j] = '*';
+            }
+        }
+    }
+}
+
+void deleteArea(int row,int col,int height,int width)
+{
+    int i,j;
+
+    for(i=row;i<row+height && i<rows;i++)
+    {
+        for(j=col;j<col+width && j<cols;j++)
+        {
+            canvas[i][j]='_';
+        }
+    }
+}
+
+void clearCanvas()
+{
+    initCanvas();
+}
