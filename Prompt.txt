@@ -1,0 +1,5 @@
+
+i would like to build a modular program with .c extenstions
+with daily achievable goal over 4 days
+keep it simple and maintain the minimum required work
+ 
